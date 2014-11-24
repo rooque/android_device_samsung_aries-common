@@ -137,9 +137,9 @@ PRODUCT_PACKAGES += \
     libnetcmdiface
 
 # Open Source Charging Mode
-PRODUCT_PACKAGES += \
-    aries_charger \
-    aries_charger_res_images
+#PRODUCT_PACKAGES += \
+#    aries_charger \
+#    aries_charger_res_images
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
