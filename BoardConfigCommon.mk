@@ -102,13 +102,13 @@ TARGET_RECOVERY_FSTAB := device/samsung/aries-common/fstab.aries
 RECOVERY_FSTAB_VERSION := 2
 
 # Open Source Charging Mode
-BOARD_POWER_SUPPLY_PATH := /sys/class/power_supply
-BOARD_BATTERY_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/battery
-BOARD_AC_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/ac
-BOARD_USB_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/usb
-BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/aries-common/recovery/graphics.c
+#BOARD_POWER_SUPPLY_PATH := /sys/class/power_supply
+#BOARD_BATTERY_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/battery
+#BOARD_AC_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/ac
+#BOARD_USB_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/usb
+#BOARD_CHARGER_ENABLE_SUSPEND := true
+#BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
+#BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/aries-common/recovery/graphics.c
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true
@@ -146,15 +146,7 @@ BOARD_SEPOLICY_DIRS += \
     device/samsung/aries-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    bdaddr_read.te \
-    file_contexts \
-    geomagneticd.te \
-    orientationd.te \
-    property_contexts \
-    pvrsrvinit.te \
-    rild.te \
-    tvouthack.te \
-    tvoutserver.te \
+
 
 # Hardware tunables
 # BOARD_HARDWARE_CLASS := device/samsung/aries-common/cmhw/

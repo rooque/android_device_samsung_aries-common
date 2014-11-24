@@ -57,7 +57,8 @@ PRODUCT_COPY_FILES += \
     device/samsung/aries-common/ueventd.aries.rc:root/ueventd.aries.rc \
     device/samsung/aries-common/setupdatadata.sh:root/sbin/setupdatadata.sh \
     device/samsung/aries-common/zram-init.sh:root/sbin/zram-init.sh \
-    device/samsung/aries-common/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/samsung/aries-common/twrp.fstab:recovery/root/etc/twrp.fstab \
+    device/samsung/aries-common/bml_over_mtd.sh:root/bml_over_mtd.sh
 
 # Prebuilt kl keymaps
 PRODUCT_COPY_FILES += \
@@ -123,14 +124,22 @@ PRODUCT_PACKAGES += \
     tvouthack \
     DeviceSettings
 
+# Wifi
+PRODUCT_PACKAGES := \
+    libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant \
+    wpa_supplicant.conf
+
 # Libnetcmd
 PRODUCT_PACKAGES += \
     libnetcmdiface
 
 # Open Source Charging Mode
-PRODUCT_PACKAGES += \
-    aries_charger \
-    aries_charger_res_images
+#PRODUCT_PACKAGES += \
+#    aries_charger \
+#    aries_charger_res_images
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
